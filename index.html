@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Marta Magallon</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Define colores pasteles */
+    :root {
+      --color-1: #ffd6cc; /* rosa claro */
+      --color-2: #ccffcc; /* verde claro */
+      --color-3: #ffffbc; /* amarillo claro */
+      --color-4: #ccf5ff; /* azul claro */
+
+    }
+
+    /* Estilos generales */
+    .section {
+      height: 100vh;
+      display: grid;
+      padding-left: 100px;
+      padding-right: 100px;
+      place-items: center;
+      text-align: center;
+      color: #333;
+    }
+
+    /* Estilos específicos de cada sección */
+    #inicio {
+      background-image: url('https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yMThiYXRjaDQta2F0aWUtMjAucG5n.png');
+      background-size: cover;
+      
+    }
+
+    #biografia {
+        background-color: var(--color-2);
+      
+    }
+
+    #habilidades {
+      background-color: var(--color-1);
+    }
+
+    #proyectos {
+        background-color: var(--color-3);
+    }
+
+    #contacto {
+        background-color: var(--color-4);
+    }
+    
+    .gallery {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .gallery img {
+      max-width: 100%;
+      max-height: 300px;
+      margin: 10px;
+    }
+
+
+    .button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: var(--color-1);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #ffa07a; /* Cambiar el color de fondo al pasar el ratón */
+    }
+
+    .profile-picture {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-image: url('https://media.licdn.com/dms/image/C5603AQHKezyidL9pNA/profile-displayphoto-shrink_800_800/0/1637640255301?e=1720656000&v=beta&t=2uvQpPknQjTUOpfD_areJWekL_5utA-OjnCjXmJ2iic'); /* Reemplaza 'tu_foto.jpg' con la URL de tu foto */
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style: none; /* Quitar la decoración de la lista */
+      padding: 0; /* Eliminar el espacio interior de la lista */
+    }
+
+    li {
+      margin-bottom: 10px; /* Agregar un espacio entre los elementos de lista */
+    }
+    .contact-icons {
+      margin-top: 20px;
+    }
+
+    .contact-icons a {
+      color: #333;
+      font-size: 40px;
+      margin: 0 10px;
+    }
+
+    .contact-icons a:hover {
+      color: #ffa07a; /* Cambiar el color al pasar el ratón */
+    }
+    .bio-icons i {
+      font-size: 36px;
+      margin: 0 10px;
+    }
+
+
+  </style>
+</head>
+<body>
+    <div class="circle"></div>
+  <!-- Sección de inicio -->
+  <section id="inicio" class="section">
+    <h1>¡Hola! Soy Marta Magallon</h1>
+    <div class="profile-picture"></div>
+    <p>Bienvenido a mi portafolio en línea.</p>
+  </section>
+
+  <!-- Sección de biografía -->
+  <section id="biografia" class="section">
+    <h2>Biografía</h2>
+    <p>Soy Marta Magallon, una desarrolladora backend con experiencia en PHP, Python, JavaScript y otras tecnologías. He trabajado en varios proyectos desafiantes que me han permitido crecer profesionalmente y mejorar mis habilidades técnicas. Durante mi carrera, he colaborado en equipos multidisciplinarios donde he aprendido a comunicarme efectivamente y a trabajar en armonía para alcanzar los objetivos del proyecto.</p>
+    <div class="bio-icons">
+      <i class="fas fa-laptop-code"></i>
+      <i class="fas fa-users"></i>
+      <i class="fas fa-lightbulb"></i>
+    </div>
+    <p>Me apasiona resolver problemas complejos y crear soluciones innovadoras que mejoren la experiencia del usuario. Siempre estoy buscando aprender nuevas tecnologías y ampliar mis conocimientos en el campo del desarrollo de software.</p>
+  </section>
+  <!-- Sección de habilidades -->
+  <section id="habilidades" class="section">
+    <h2>Habilidades</h2>
+    <p>Me especializo en el desarrollo de aplicaciones web y la creación de APIs robustas. Mis principales habilidades incluyen:</p>
+    <ul>
+      <li>Desarrollo web con PHP, Python y JavaScript <i class="icon fas fa-code"></i></li>
+      <li>Diseño e implementación de bases de datos relacionales y no relacionales <i class="icon fas fa-database"></i></li>
+      <li>Creación de APIs RESTful <i class="icon fas fa-link"></i></li>
+      <li>Manejo de servidores y despliegue de aplicaciones <i class="icon fas fa-server"></i></li>
+      <li>Trabajo en equipo y colaboración <i class="icon fas fa-users"></i></li>
+    </ul>
+  </section>
+
+  <!-- Sección de proyectos -->
+  <section id="proyectos" class="section">
+    <h2>Proyectos</h2>
+
+        <button class="button" id="prev">&lt; Anterior</button>
+        <div class="gallery">
+          <!-- Aquí se cargarán las imágenes de los proyectos con JavaScript -->
+        </div>
+        <button class="button" id="next">Siguiente &gt;</button>
+     
+  </section>
+
+  <!-- Sección de contacto -->
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>¡Me encantaría saber de ti! Puedes contactarme en martamagallon1994@gmail.com</p>
+    <div class="contact-icons">
+      <a href="https://www.linkedin.com/in/marta-maleyka-magallon-escobar/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/marta_maleyka" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/MartaMaleyka" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </section>
+
+  <script>
+    // Agrega las imágenes de los proyectos a la galería
+    const projects = [
+ 'https://static.platzi.com/media/porfilio/captura-de-pantalla-2024-04-21-a-las-82425-p-m_d12d422c-b946-4b95-8048-e4c89efff394.png',
+    'https://static.platzi.com/media/porfilio/captura-de-pantalla-2024-04-23-a-las-81359-p-m_c7453011-8956-4b19-a58a-a654f3ee1ac3.png',
+   'https://static.platzi.com/media/porfilio/captura-de-pantalla-2024-04-26-a-las-124525-p-m_df8f11d5-ace9-41e5-a85b-4217625c1ca8.png'
+    ];
+
+    const gallery = document.querySelector('.gallery');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    let currentIndex = 0;
+
+    function showProject(index) {
+      gallery.innerHTML = `<img src="${projects[index]}" alt="Proyecto ${index + 1}">`;
+    }
+
+    function showNextProject() {
+      currentIndex = (currentIndex + 1) % projects.length;
+      showProject(currentIndex);
+    }
+
+    function showPrevProject() {
+      currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+      showProject(currentIndex);
+    }
+
+    prevButton.addEventListener('click', showPrevProject);
+    nextButton.addEventListener('click', showNextProject);
+
+    // Mostrar el primer proyecto al cargar la página
+    showProject(currentIndex);
+  </script>
+</body>
+</html>
